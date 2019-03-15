@@ -19,7 +19,8 @@
                             @endif
                     @endif  
                     @if(Auth::user()->document)  
-                        <a class=" float-rightbtn btn-outline-secondary btn-sm" href="/storage/documents/{{Auth::user()->document->document}}" target="_blank">Preview</a>
+                        <a class="float-right btn btn-outline-primary btn-sm" href="{{route('preview', ['preview' => Auth::user()->document->document])}}">Preview</a>
+                        {{-- <a class=" float-rightbtn btn-outline-secondary btn-sm" href="/storage/documents/{{Auth::user()->document->document}}" target="_blank">Preview</a> --}}
                     @endif
                 </div>
                 <div class="card-body">

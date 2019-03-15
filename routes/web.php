@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/preview/{preview}', 'DocumentController@preview')->name('preview');
+
 Route::post('/document/store', 'DocumentController@store')->name('document.store');
 
 //Will grade the student

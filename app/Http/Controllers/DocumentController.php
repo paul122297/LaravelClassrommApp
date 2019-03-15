@@ -7,6 +7,7 @@ use App\Document;
 use App\Http\Requests\DocumentRequest;
 use App\Http\Requests\GradeRequest;
 use Auth;
+use Response;
 
 class DocumentController extends Controller
 {
@@ -52,4 +53,14 @@ class DocumentController extends Controller
         return redirect('home')->with('success', $name."'s project has been successfully graded");
     }
 
+    public function preview($filename)
+    {
+        //$filename = 'test.pdf';
+        $path = storage_path('app/public/documents/'.$filename);
+
+        return Response::make(file_get_contents($path), 200, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; filename="'.$filename.'"'
+        ]);
+    }
 }

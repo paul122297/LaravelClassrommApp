@@ -22,7 +22,8 @@
                                                     <div class="input-group-append">
                                                         <button class="btn btn-outline-secondary btn-sm" type="submit">Submit</button>
                                                         {{-- <a class="btn btn-outline-secondary btn-sm" href="https://view.officeapps.live.com/op/view.aspx?src=https://qmsportaltech.com/storage/documents/{{$user->document->document}}" target="_blank">Preview</a> --}}
-                                                        <a class="btn btn-outline-secondary btn-sm" href="/storage/documents/{{$user->document->document}}" target="_blank">Preview</a>
+                                                        {{-- <a class="btn btn-outline-secondary btn-sm" href="/storage/documents/{{$user->document->document}}" target="_blank">Preview</a> --}}
+                                                        <a class="float-right btn btn-outline-primary btn-sm" href="{{route('preview', ['preview' => $user->document->document])}}">Preview</a>
                                                     </div>
                                 </form>
                                 @else
