@@ -21,7 +21,8 @@
                                                 <input type="text" class="form-control" placeholder="Grade" name="grade" value="{{$user->document->grade}}" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                                     <div class="input-group-append">
                                                         <button class="btn btn-outline-secondary btn-sm" type="submit">Submit</button>
-                                                        <a class="btn btn-outline-secondary btn-sm" href="https://view.officeapps.live.com/op/view.aspx?src=https://qmsportaltech.com/storage/documents/{{$user->document->document}}" target="_blank">Preview</a>
+                                                        {{-- <a class="btn btn-outline-secondary btn-sm" href="https://view.officeapps.live.com/op/view.aspx?src=https://qmsportaltech.com/storage/documents/{{$user->document->document}}" target="_blank">Preview</a> --}}
+                                                        <a class="btn btn-outline-secondary btn-sm" href="/storage/documents/{{$user->document->document}}" target="_blank">Preview</a>
                                                     </div>
                                 </form>
                                 @else

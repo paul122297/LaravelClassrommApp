@@ -19,7 +19,7 @@
                             @endif
                     @endif  
                     @if(Auth::user()->document)  
-                        <a class=" float-right btn btn-outline-secondary btn-sm" href="https://view.officeapps.live.com/op/view.aspx?src=https://qmsportaltech.com/storage/documents/{{Auth::user()->document->document}}" target="_blank">Preview</a>
+                        <a class=" float-rightbtn btn-outline-secondary btn-sm" href="/storage/documents/{{Auth::user()->document->document}}" target="_blank">Preview</a>
                     @endif
                 </div>
                 <div class="card-body">
@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="form-group">
                                         <label for="document">Upload Project</label>
-                                        <input type="file" accept=".doc,.dot,.docx,.dotx,.docm,.dotm" name="document" id="document">
+                                        <input type="file" accept=".pdf" name="document" id="document">
                                     </div>
 
                                 <button type="submit" class="float-right btn btn-primary">Submit</button>
