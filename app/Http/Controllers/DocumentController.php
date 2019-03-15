@@ -63,4 +63,11 @@ class DocumentController extends Controller
             'Content-Disposition' => 'inline; filename="'.$filename.'"'
         ]);
     }
+
+    public function info($id)
+    {
+        $docu = Document::find($id);
+        return view('teacher.info')->with('item', $docu);
+    }
+
 }

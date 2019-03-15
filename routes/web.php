@@ -19,12 +19,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//Student and Teacher route
 Route::get('/preview/{preview}', 'DocumentController@preview')->name('preview');
 
+//Student Route
 Route::post('/document/store', 'DocumentController@store')->name('document.store');
 
-//Will grade the student
+//Will grade the student Teacher routes
 Route::patch('/document/grade/{id}', 'DocumentController@grade')->name('document.grade');
+Route::get('/info/{id}', 'DocumentController@info')->name('info');
 
 //This routes will be for admin only
 Route::group(['middleware' => 'Admin'], function () {

@@ -10,7 +10,7 @@
                     @if(!Auth::user()->document)
                         Upload your Project here
                     @elseif (Auth::user()->document && !Auth::user()->document->grade)
-                        Please wait for your score
+                        Goodluck {{Auth::user()->name}}
                     @else
                             @if(Auth::user()->document->grade > 49)
                                 Congratulations! You passed
