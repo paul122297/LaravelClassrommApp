@@ -9,7 +9,7 @@
                     <div class="card-body">
                             <div class="list-group">
                                     <a href="{{route('accounts')}}" class="list-group-item list-group-item-action">Accounts</a>
-                                    <a href="#" class="list-group-item list-group-item-action">Documents</a>
+                                    <a href="{{route('documents')}}" class="list-group-item list-group-item-action">Documents</a>
                             </div>
                     </div>
             </div>

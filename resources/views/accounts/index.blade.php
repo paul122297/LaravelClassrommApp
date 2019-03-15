@@ -18,7 +18,7 @@
                            {{$user->name}}
 
                            <span class="float-right row">
-                               <form method="post" action="{{ route('account.delete', ['id' => $user->id]) }}">
+                            <form method="post" action="{{ route('account.delete', ['id' => $user->id]) }}">
                                 @method('DELETE')
                                 @csrf
                                 <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>

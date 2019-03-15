@@ -8,6 +8,7 @@ use App\Http\Requests\DocumentRequest;
 use App\Http\Requests\GradeRequest;
 use Auth;
 use Response;
+use App\User;
 
 class DocumentController extends Controller
 {
@@ -70,4 +71,21 @@ class DocumentController extends Controller
         return view('teacher.info')->with('item', $docu);
     }
 
+
+    public function index()
+    {
+        //$documents = User::all();
+        //return view('admin.documents')->with('items', $documents);
+
+        $students = User::where('role', '=', '2')->get();
+        return view('admin.documents')->with('students', $students);
+    }
+
+    public function destroy($id)
+    {
+       $post = Document::find($id);
+       $post->delete();
+
+       return redirect('documents')->with('error', 'Post successfully deleted');
+    }
 }
