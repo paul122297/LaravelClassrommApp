@@ -26,7 +26,7 @@ class DocumentRequest extends FormRequest
         return [
             'filename' => 'required|min:5',
             'notes' => 'required|min:5',
-            'document' => 'required|mimes:pdf'
+            'document' => 'required|max:1999|mimes:pdf'
         ];
     }
 }
