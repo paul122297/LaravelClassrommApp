@@ -5,6 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
                 @include('inc.msg')
+        @if(Auth::user()->email_verified_at)        
             <div class="card">
                 <div class="card-header">
                     @if(!Auth::user()->document)
@@ -55,6 +56,20 @@
                     @endif
                 </div>
             </div>
+            @else
+            <div class="card">
+                <div class="card-header">
+                <h4 class="text-muted">Welcome to World Literature LIT 313-IT41FA1
+                </h4>
+                </div>
+                <div class="card-body">
+                    <p>Hi {{Auth::user()->name}}! you can't upload your analysis paper yet, because your account is not yet activated. Please inform the admin to activate your account.</p>
+
+                    <p>Thank you!</p>
+                </div>
+            </div>
+
+            @endif
         </div>
     </div>
 </div>

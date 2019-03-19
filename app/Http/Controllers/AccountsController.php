@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Http\Requests\AccountRequest;
+use Carbon;
 
 class AccountsController extends Controller
 {
@@ -62,6 +63,14 @@ class AccountsController extends Controller
         return redirect('accounts')->with('success', 'Account successfully Updated');
     }
 
+    public function activate($id)
+    {
+       $user = User::find($id);
+       $user->email_verified_at = Carbon\Carbon::now();
+       $user->save();
+
+       return redirect('accounts')->with('success', 'Account successfully Activated');
+    }
 
     public function destroy($id)
     {

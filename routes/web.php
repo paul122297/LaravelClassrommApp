@@ -37,6 +37,7 @@ Route::group(['middleware' => 'Admin'], function () {
     Route::get('/account/edit/{id}', 'AccountsController@edit')->name('account.edit');
     Route::patch('/account/update/{id}', 'AccountsController@update')->name('account.update');
     Route::delete('/accounts/destroy/{id}', 'AccountsController@destroy')->name('account.delete');
+    Route::patch('/account/activate/{id}', 'AccountsController@activate')->name('account.activate');
 
     Route::get('/documents', 'DocumentController@index')->name('documents');
     Route::delete('/document/destroy/{id}', 'DocumentController@destroy')->name('document.delete');
