@@ -29,7 +29,7 @@ class HomeController extends Controller
         if (Auth::user()->role == 0) {
             return view('admin.home');
         } elseif (Auth::user()->role == 1) {
-            $students = User::where('role', '=', '2')->get();
+            $students = User::where('role', '=', '2')->where('email_verified_at', '!=', NULL)->get();
             return view('teacher.home')->with('students', $students);
         } elseif (Auth::user()->role == 2) {
             return view('student.home');

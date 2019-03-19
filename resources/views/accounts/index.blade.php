@@ -18,11 +18,11 @@
                            {{$user->name}}
 
                            <span class="float-right row">
-                            {{-- <form method="post" action="{{ route('account.delete', ['id' => $user->id]) }}">
+                            <form method="post", onsubmit = 'return confirm("Are you sure you want to delete this post?")', action="{{ route('account.delete', ['id' => $user->id]) }}">
                                 @method('DELETE')
                                 @csrf
                                 <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
-                            </form>  --}}
+                            </form> 
                             @if(!$user->email_verified_at)
                             <form method="post" action="{{ route('account.activate', ['id' => $user->id]) }}">
                                 @method('PATCH')
