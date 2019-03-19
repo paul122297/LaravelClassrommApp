@@ -25,7 +25,7 @@
                                                    <div class="input-group-append">
                                                          {{-- <a class="btn btn-outline-secondary btn-sm" href="/storage/documents/{{$user->document->document}}" target="_blank">Preview</a> --}}
                                                          <a class="float-right btn btn-outline-primary btn-sm" href="{{route('preview', ['preview' => $user->document->document])}}" target="_blank">Preview</a>
-                                                         <form method="post" action="{{ route('document.delete', ['id' => $user->document->id]) }}">
+                                                         <form method="post"  onsubmit = 'return confirm("Are you sure you want to delete this post?")', action="{{ route('document.delete', ['id' => $user->document->id]) }}">
                                                                 @method('DELETE')
                                                                 @csrf
                                                                 <button type="submit" class="float-right btn btn-outline-danger btn-sm">Delete</button>
