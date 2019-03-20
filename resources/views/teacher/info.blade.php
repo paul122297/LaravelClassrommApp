@@ -7,7 +7,7 @@
                 @include('inc.msg')
             <div class="card">
             <div class="card-header">
-                    <a class="float-right btn btn-outline-danger btn-sm" href="{{route('home')}}">Back</a>
+            <a class="float-right btn btn-outline-danger btn-sm" href="{{route('home')}}">Back</a>
                 Project Information of {{$item->user->name}}
             </div>
                 <div class="card-body">
