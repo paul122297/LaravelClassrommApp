@@ -13,23 +13,23 @@
                 <div class="card-body">
                     @if($item->grade)
                     <div class="card">
-                        <div class="card-body">
-                            <label class="col-md-2"><b>Rate</b></label> {{$item->grade}}
+                        <div class="card-body row">
+                            <label class="col-md-2"><b>Rate</b></label> <p class="col-md-8">{{$item->grade}}</p>
                         </div>
                     </div>
                     @endif
                     <div class="card">
-                            <div class="card-body">
-                                <label class="col-md-2"><b>Filename</b></label> {{$item->filename}} 
+                            <div class="card-body row">
+                                <label class="col-md-2"><b>Filename</b></label> <p class="col-md-8">{{$item->filename}} </p>
                             </div>
                     </div>
                     <div class="card">
-                            <div class="card-body">
-                                <label class="col-md-2"><b>Notes</b></label> {{$item->notes}} 
+                            <div class="card-body row">
+                                <label class="col-md-2"><b>Notes</b></label> <p class="col-md-10">{{$item->notes}} </p>
                             </div>
                     </div>
                     <div class="card">
-                            <div class="card-body">
+                            <div class="card-body row">
                                 <label class="col-md-3"><b>Submitted on</b></label> {{$item->created_at}} 
                             </div>
                     </div>       
