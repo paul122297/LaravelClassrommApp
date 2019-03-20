@@ -36,7 +36,7 @@
                                                     </div>
                                 </form>
                                 @else
-                                <span class="badge badge-danger badge-pill">No project uploaded yet</span>
+                                <span class="float-right badge badge-danger badge-pill">No project uploaded yet</span>
                                 @endif                                       
                                
                             </li>
