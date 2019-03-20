@@ -14,7 +14,7 @@
                         Goodluck {{Auth::user()->name}}
                     @else
                             @if(Auth::user()->document->grade > 49)
-                                Congratulations! You passed
+                                Congratulations! You passed :)
                             @else
                                 Sorry you failed
                             @endif
@@ -48,9 +48,9 @@
                         <h1>Please wait for your score</h1>
                     @else
                         @if(Auth::user()->document->grade > 49)
-                            <h1>Congratulations! your grade is {{Auth::user()->document->grade}}%</h1>
+                            <h1 class="text-muted">Congratulations! your grade is {{Auth::user()->document->grade}}%</h1>
                             @else
-                            <h1>Sorry you failed! your grade is {{Auth::user()->document->grade}}%</h1>
+                            <h1 class="text-muted">Sorry you failed! your grade is {{Auth::user()->document->grade}}%</h1>
                         @endif
                         
                     @endif
