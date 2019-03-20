@@ -6,7 +6,12 @@
         <div class="col-md-8">
                 @include('inc.msg')
             <div class="card">
-                <div class="card-header text-muted">List of Students with their Textual Analysis</div>
+                <div class="card-header">
+                        <button type="button" class="float-right btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
+                                Instruction
+                        </button>
+                    <p class="text-muted">List of Students with their Textual Analysis</p>
+                </div>
                     <div class="card-body">
                             @foreach($students as $user)
 
@@ -48,7 +53,35 @@
                     </div>
             </div>
 
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Instruction</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul class="list-group">
+                    <li class="list-group-item">
+                        Use the text box and submit button to submit the student's textual analysis grade.
+                    </li>
+                    <li class="list-group-item">
+                        Use the preview button to open the textual analysis.
+                    </li>
+                    <li class="list-group-item">
+                        Use the info button to view the project information.
+                    </li>
+                  </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
         </div>
     </div>
 </div>
